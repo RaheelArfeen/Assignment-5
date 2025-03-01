@@ -7,14 +7,14 @@
     <title>Dev Board</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body::-webkit-scrollbar{
+        body::-webkit-scrollbar {
             display: none;
         }
     </style>
 </head>
-<body id="body" class="bg-[#F4F7FF] md:p-6 p-2 text-[#00303C]">
+<body id="body" class="bg-[#F4F7FF] lg:p-6 p-4 text-[#00303C]">
 
-    <header class="bg-white container mx-auto rounded-xl p-3">
+    <header class="bg-white lg:container w-full mx-auto rounded-xl p-3">
         <nav class="flex items-center justify-between">
             <div class="flex items-end gap-2"><img class="md:w-full w-8" src="assets/logo.svg"><p class="md:text-3xl text-xl font-thin"> Dev<span class="font-bold">Board</span></p></div>
             <!-- color changing btn and task count -->
@@ -26,12 +26,12 @@
     </header>
 
     <!-- main container -->
-    <main class="container w-full mx-auto mt-4 flex gap-6">
-        <section class="bg-white p-6 rounded-xl w-3/4 relative">
+    <main class="lg:container w-full mx-auto mt-4 flex flex-col lg:flex-row gap-6">
+        <section class="bg-white md:p-6 p-3 rounded-xl lg:w-3/4 w-full relative">
             <!-- heading section -->
-            <div class="flex items-center justify-between gap-2 border-dashed">
+            <div class="flex items-center md:flex-nowrap flex-wrap justify-between gap-2 border-dashed">
                 <!-- task number -->
-                <div class="flex items-center bg-[#f4f7ff] w-1/4 rounded-lg lg:px-6 lg:py-4 px-4 py-2 h-[120px]">
+                <div class="flex items-center bg-[#f4f7ff] w-full lg:w-1/4 rounded-lg lg:px-6 lg:py-4 px-4 py-2 h-[120px]">
                     <div class="w-16 p-4 flex items-center justify-center bg-white rounded-full"><img src="assets/checkbox.svg"></div>
                     <div class="ml-3">
                         <p>Task Assigned</p>
@@ -40,16 +40,16 @@
                 </div>
 
                 <!-- discover something -->
-                <div id="discover" class="flex cursor-pointer items-center bg-[#f4f7ff] w-2/4 bg-gradient-to-tl rounded-lg from-[#9ba8f8] to-[#3752FD] p-4 text-white h-[120px]">
-                    <div class="w-18 ml-6"><img src="assets/board.svg"></div>
-                    <div>
-                        <h1 class="text-2xl ml-3">Discover Something</h1>
-                        <h1 class="text-2xl ml-3">New Today!</h1>
+                <div id="discover" class="flex cursor-pointer items-center bg-[#f4f7ff] w-full lg:w-2/4 bg-gradient-to-tl rounded-lg from-[#9ba8f8] to-[#3752FD] p-0 md:p-4 text-white h-[120px]">
+                    <div class="w-18 md:ml-6 ml-2"><img src="assets/board.svg"></div>
+                    <div class="leading-none">
+                        <h1 class="xl:text-2xl text-lg ml-2 xl:p-2 p-0">Discover Something</h1>
+                        <h1 class="xl:text-2xl text-lg ml-2">New Today!</h1>
                     </div>
                 </div>
 
                 <!-- date container -->
-                <div class="flex items-center bg-[#f4f7ff] w-1/4 rounded-lg px-6 py-4 h-[120px]">
+                <div class="flex items-center bg-[#f4f7ff] w-full lg:w-1/4 rounded-lg px-6 py-4 h-[120px]">
                     <div class="w-16 p-4 flex items-center justify-center bg-white rounded-full"><img src="assets/calender.svg"></div>
                     <div id="date" class="ml-3 font-bold text-xl">
                         
@@ -61,12 +61,13 @@
             <div class="w-full border mt-6 border-dashed absolute left-0"></div>
 
             <!-- cards section -->
-            <div class="grid grid-cols-3 mt-12 gap-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-12 gap-4">
+                <!-- Example card -->
                 <div class="bg-[#f4f7ff] px-4 py-5 rounded-lg taskBox">
                     <span class="p-2 bg-white rounded-lg font-light">ShopEase</span>
                     <h1 id="title" class="text-2xl mt-4 mb-2 font-medium">Fix Mobile Button Issue</h1>
                     <div class="bg-white rounded-lg w-full p-3 text-gray-400 text-sm border-b ">
-                        <span>Debug using Chrove DevTools, check for overlappi...</span>
+                        <span>Debug using Chrome DevTools, check for overlapping...</span>
                     </div>
                     <div class="w-full border border-dashed my-6"></div>
                     <div class="flex items-center justify-between">
@@ -77,11 +78,12 @@
                         <button id="complete-btn" class="py-2 px-3 rounded-lg bg-[#3752FD] text-white">Completed</button>
                     </div>
                 </div>
+                
                 <div class="bg-[#f4f7ff] px-4 py-5 rounded-lg taskBox">
                     <span class="p-2 bg-white rounded-lg font-light">CloudSync</span>
-                    <h1 id="title" class="text-2xl mt-4 mb-2 font-medium">Add Dark Mode</h1>
+                    <h1 id="title" class="text-2xl mt-4 mb-2 font-medium">Add Drak Mode</h1>
                     <div class="bg-white rounded-lg w-full p-3 text-gray-400 text-sm border-b ">
-                        <span>Store the user's preference in localStorage, update CSS var...</span>
+                        <span>Store the user's preferrence in localStorage, update CSS vari...</span>
                     </div>
                     <div class="w-full border border-dashed my-6"></div>
                     <div class="flex items-center justify-between">
@@ -92,11 +94,12 @@
                         <button id="complete-btn" class="py-2 px-3 rounded-lg bg-[#3752FD] text-white">Completed</button>
                     </div>
                 </div>
+                
                 <div class="bg-[#f4f7ff] px-4 py-5 rounded-lg taskBox">
                     <span class="p-2 bg-white rounded-lg font-light">SwiftPay</span>
                     <h1 id="title" class="text-2xl mt-4 mb-2 font-medium">Optimize Home page</h1>
                     <div class="bg-white rounded-lg w-full p-3 text-gray-400 text-sm border-b ">
-                        <span>Debug using Chrome DevToold, check for overlappi...</span>
+                        <span>Debug using Chrome DevTools, check for overlapping...</span>
                     </div>
                     <div class="w-full border border-dashed my-6"></div>
                     <div class="flex items-center justify-between">
@@ -107,41 +110,44 @@
                         <button id="complete-btn" class="py-2 px-3 rounded-lg bg-[#3752FD] text-white">Completed</button>
                     </div>
                 </div>
-                <div class="bg-[#f4f7ff] px-4 py-5 rounded-lg taskBox">
-                    <span class="p-2 bg-white rounded-lg font-light">Meta</span>
-                    <h1 id="title" class="text-2xl mt-4 mb-2 font-medium">Add new emoji 🤲</h1>
-                    <div class="bg-white rounded-lg w-full p-3 text-gray-400 text-sm border-b ">
-                        <span>Debug using Chrove DevTools, check for overlappi...</span>
-                    </div>
-                    <div class="w-full border border-dashed my-6"></div>
-                    <div class="flex items-center justify-between">
-                        <div>
-                            <p class="text-sm text-gray-400">Deadline</p>
-                            <h5>21 March 2025</h5>
-                        </div>
-                        <button id="complete-btn" class="py-2 px-3 rounded-lg bg-[#3752FD] text-white">Completed</button>
-                    </div>
-                </div>
-                <div class="bg-[#f4f7ff] px-4 py-5 rounded-lg taskBox">
-                    <span class="p-2 bg-white rounded-lg font-light">Google LLC</span>
-                    <h1 id="title" class="text-2xl mt-4 mb-2 font-medium">Integrate OpenAI API</h1>
-                    <div class="bg-white rounded-lg w-full p-3 text-gray-400 text-sm border-b ">
-                        <span>Debug using Chrove DevTools, check for overlappi...</span>
-                    </div>
-                    <div class="w-full border border-dashed my-6"></div>
-                    <div class="flex items-center justify-between">
-                        <div>
-                            <p class="text-sm text-gray-400">Deadline</p>
-                            <h5>21 March 2025</h5>
-                        </div>
-                        <button id="complete-btn" class="py-2 px-3 rounded-lg bg-[#3752FD] text-white">Completed</button>
-                    </div>
-                </div>
+
                 <div class="bg-[#f4f7ff] px-4 py-5 rounded-lg taskBox">
                     <span class="p-2 bg-white rounded-lg font-light">Glassdoar</span>
                     <h1 id="title" class="text-2xl mt-4 mb-2 font-medium">Improve Job searching</h1>
                     <div class="bg-white rounded-lg w-full p-3 text-gray-400 text-sm border-b ">
-                        <span>Debug using Chrove DevTools, check for overlappi...</span>
+                        <span>Debug using Chrome DevTools, check for overlapping...</span>
+                    </div>
+                    <div class="w-full border border-dashed my-6"></div>
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-sm text-gray-400">Deadline</p>
+                            <h5>21 March 2025</h5>
+                        </div>
+                        <button id="complete-btn" class="py-2 px-3 rounded-lg bg-[#3752FD] text-white">Completed</button>
+                    </div>
+                </div>
+
+                <div class="bg-[#f4f7ff] px-4 py-5 rounded-lg taskBox">
+                    <span class="p-2 bg-white rounded-lg font-light">Meta</span>
+                    <h1 id="title" class="text-2xl mt-4 mb-2 font-medium">Add new emoji 🤲</h1>
+                    <div class="bg-white rounded-lg w-full p-3 text-gray-400 text-sm border-b ">
+                        <span>Debug using Chrome DevTools, check for overlapping...</span>
+                    </div>
+                    <div class="w-full border border-dashed my-6"></div>
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-sm text-gray-400">Deadline</p>
+                            <h5>21 March 2025</h5>
+                        </div>
+                        <button id="complete-btn" class="py-2 px-3 rounded-lg bg-[#3752FD] text-white">Completed</button>
+                    </div>
+                </div>
+
+                <div class="bg-[#f4f7ff] px-4 py-5 rounded-lg taskBox">
+                    <span class="p-2 bg-white rounded-lg font-light">Google LLC</span>
+                    <h1 id="title" class="text-2xl mt-4 mb-2 font-medium">Integrate OpinAI API</h1>
+                    <div class="bg-white rounded-lg w-full p-3 text-gray-400 text-sm border-b ">
+                        <span>Debug using Chrome DevTools, check for overlapping...</span>
                     </div>
                     <div class="w-full border border-dashed my-6"></div>
                     <div class="flex items-center justify-between">
@@ -156,13 +162,13 @@
         </section>
 
         <!-- activity history -->
-        <section class="bg-white w-1/4 rounded-xl py-6 px-8 relative">
+        <section class="bg-white w-full lg:w-1/4 rounded-xl py-6 md:px-8 px-4 relative">
             <!-- title -->
             <div class="flex items-center gap-3 text-xl font-bold justify-center"><img src="assets/activity.svg"><span class="text-center">Activity Log</span></div>
             <div class="flex items-center justify-center"><button id="clear-btn" class="py-2 px-3 rounded-lg bg-[#3752FD] text-white mt-4">Clear History</button></div>
 
             <!-- middle line -->
-            <div class="w-full border mt-6 border-dashed absolute left-0"></div>
+            <div class="w-full border md:mt-6 mt-2 border-dashed absolute left-0"></div>
 
             <!-- historys -->
             <div id="tasks" class="mt-12"></div>
